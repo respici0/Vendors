@@ -18,7 +18,7 @@ class NavBar extends React.Component {
           <div className="background">
             <h3>A carousal of vendor images will go here</h3>
           </div>
-          {/* <Route exact path="/" component={Home} /> */}
+
         </React.Fragment>
       )
     }
