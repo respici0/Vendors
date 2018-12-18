@@ -1,5 +1,4 @@
 import React from 'react';
-import TextInput from '../common/TextInput';
 
 class Register extends React.Component {
   constructor(props) {
