@@ -1,4 +1,5 @@
 import React from 'react';
+import RegisterForm from '../forms/RegisterForm';
 
 class Register extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Register extends React.Component {
   render() {
     return (
       <React.Fragment>
-
+        <RegisterForm />
       </React.Fragment>
     )
   }

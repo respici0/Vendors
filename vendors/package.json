@@ -1,4 +1,5 @@
 {
+  "proxy": "http://vendors.test",
   "name": "vendors",
   "version": "0.1.0",
   "private": true,

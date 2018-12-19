@@ -15,17 +15,13 @@ class NavBar extends React.Component {
       return (
         <React.Fragment>
           <Login />
-          <div className="background">
-            <h3>A carousal of vendor images will go here</h3>
-          </div>
-
         </React.Fragment>
       )
     }
     else {
       return (
         <React.Fragment>
-          <Register />
+          <h3>HomePage</h3>
         </React.Fragment>
       )
     }
