@@ -121,7 +121,8 @@ C:\SF.Code\C61\personal_project\vendors\vendors\bin\Microsoft.AI.DependencyColle
 C:\SF.Code\C61\personal_project\vendors\vendors\bin\Microsoft.AI.WindowsServer.xml
 C:\SF.Code\C61\personal_project\vendors\vendors\bin\Microsoft.AI.Web.xml
 C:\SF.Code\C61\personal_project\vendors\vendors\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\SF.Code\C61\personal_project\vendors\vendors\obj\Debug\vendors.web.csproj.CoreCompileInputs.cache
-C:\SF.Code\C61\personal_project\vendors\vendors\obj\Debug\vendors.web.csproj.CopyComplete
+C:\SF.Code\C61\personal_project\vendors\vendors\obj\Debug\Vendors.Web.csprojAssemblyReference.cache
+C:\SF.Code\C61\personal_project\vendors\vendors\obj\Debug\Vendors.Web.csproj.CoreCompileInputs.cache
+C:\SF.Code\C61\personal_project\vendors\vendors\obj\Debug\Vendors.Web.csproj.CopyComplete
 C:\SF.Code\C61\personal_project\vendors\vendors\obj\Debug\vendors.dll
 C:\SF.Code\C61\personal_project\vendors\vendors\obj\Debug\vendors.pdb
