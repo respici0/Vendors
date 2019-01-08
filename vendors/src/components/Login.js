@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 import Register from "../components/Register";
+import { connect } from "react-redux";
 
 class Login extends React.Component {
   constructor(props) {
@@ -12,14 +13,16 @@ class Login extends React.Component {
   }
 
   onChange = e => {
+    const name = e.target.name;
+    const val = e.target.value;
     this.setState({
-      email: e.target.value,
-      password: e.target.value
+      [name]: val
     });
   };
 
   onLoginClicked = () => {
     // send new user Id to Redux store
+    this.props.setUser(this.state.email);
   };
 
   render() {
@@ -29,6 +32,7 @@ class Login extends React.Component {
           {/* <Link to="/">Vendors</Link> */}
           <a href="#" className="navbar-brand" style={{ color: "white" }}>
             Vendors
+            {/* Welcome, {this.props.user} */}
           </a>
           <form className="form-inline">
             <Link to="/register">
@@ -36,12 +40,14 @@ class Login extends React.Component {
             </Link>
             <input
               className="form-control mr-sm-2"
+              name="email"
               value={this.state.email}
               onChange={this.onChange}
               placeholder="Email"
             />
             <input
               className="form-control mr-sm-2"
+              name="password"
               value={this.state.password}
               onChange={this.onChange}
               placeholder="Password"
@@ -61,6 +67,12 @@ class Login extends React.Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    user: state.user
+  };
+}
+
 function mapDispatchToProps(dispatch) {
   // return an object that becomes the props given to your component
   return {
@@ -68,4 +80,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default Login;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);
