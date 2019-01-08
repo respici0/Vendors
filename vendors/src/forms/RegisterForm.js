@@ -1,5 +1,5 @@
-import React from 'react';
-import TextInput from '../common/TextInput';
+import React from "react";
+import TextInput from "../common/TextInput";
 
 const RegisterForm = props => {
   return (
@@ -30,9 +30,8 @@ const RegisterForm = props => {
           onChange={props.onChange}
         />
       </form>
-
     </div>
-  )
-}
+  );
+};
 
 export default RegisterForm;

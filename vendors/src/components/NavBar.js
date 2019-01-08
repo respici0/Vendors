@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 //import { Route, Link } from 'react-router-dom';
-import Login from './Login';
-import Register from './Register';
+import Login from "./Login";
+import Register from "./Register";
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: false,
-    }
+      isLoggedIn: false
+    };
   }
   render() {
     if (!this.state.isLoggedIn) {
@@ -16,14 +16,13 @@ class NavBar extends React.Component {
         <React.Fragment>
           <Login />
         </React.Fragment>
-      )
-    }
-    else {
+      );
+    } else {
       return (
         <React.Fragment>
           <h3>HomePage</h3>
         </React.Fragment>
-      )
+      );
     }
   }
 }
