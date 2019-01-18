@@ -1,5 +1,5 @@
 import React from "react";
-//import { Route, Link } from 'react-router-dom';
+import { Route, Link } from "react-router-dom";
 import Login from "./Login";
 
 class NavBar extends React.Component {
@@ -10,19 +10,17 @@ class NavBar extends React.Component {
     };
   }
   render() {
-    if (!this.state.isLoggedIn) {
-      return (
-        <React.Fragment>
-          <Login />
-        </React.Fragment>
-      );
-    } else {
-      return (
-        <React.Fragment>
-          <h3>HomePage</h3>
-        </React.Fragment>
-      );
-    }
+    return (
+      <React.Fragment>
+        <nav className="navbar navbar-dark bg-dark">
+          {/* <Link to="/">Vendors</Link> */}
+          <a href="#" className="navbar-brand" style={{ color: "white" }}>
+            Vendors
+            {/* Welcome, {this.props.user} */}
+          </a>
+        </nav>
+      </React.Fragment>
+    );
   }
 }
 

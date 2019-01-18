@@ -3,7 +3,7 @@ import TextInput from "../common/TextInput";
 
 const RegisterForm = props => {
   return (
-    <div className="container">
+    <React.Fragment>
       <form className="registerForm">
         <TextInput
           name="email"
@@ -29,8 +29,12 @@ const RegisterForm = props => {
           value={props.confirmPassword}
           onChange={props.onChange}
         />
+
+        <button type="button" className="btn btn-primary">
+          Register
+        </button>
       </form>
-    </div>
+    </React.Fragment>
   );
 };
 
