@@ -2,13 +2,17 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import Login from "./Login";
+import Register from "./Register";
 
 const Navigation = () => (
   <Router>
-    <div>
+    <React.Fragment>
       <NavBar />
       <Route exact path="/home" component={Home} />
-    </div>
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
+    </React.Fragment>
   </Router>
 );
 

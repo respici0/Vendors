@@ -1,6 +1,7 @@
 import React from "react";
 // import Register from "../components/Register";
 import { connect } from "react-redux";
+import TextInput from "../common/TextInput";
 
 class Login extends React.Component {
   constructor(props) {
@@ -14,9 +15,12 @@ class Login extends React.Component {
   onChange = e => {
     const name = e.target.name;
     const val = e.target.value;
-    this.setState({
-      [name]: val
-    });
+    this.setState(
+      {
+        [name]: val
+      },
+      console.log("name, val", [name], val)
+    );
   };
 
   onLoginClicked = () => {
@@ -27,29 +31,55 @@ class Login extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <form className="form-inline">
-          <input
-            className="form-control mr-sm-2"
-            name="email"
-            value={this.state.email}
-            onChange={this.onChange}
-            placeholder="Email"
-          />
-          <input
-            className="form-control mr-sm-2"
-            name="password"
-            value={this.state.password}
-            onChange={this.onChange}
-            placeholder="Password"
-          />
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={this.onLoginClicked}
-          >
-            Login
-          </button>
-        </form>
+        <div id="loginPage" className="d-none d-lg-flex align-items-center ">
+          <div className="container w-50 ">
+            <h1 className="display-2 font-weight-bolder mb-4">Vendors</h1>
+            <div className="form-group">
+              <label className="form-label" htmlFor="email">
+                Email
+              </label>
+              <TextInput
+                name="email"
+                type="text"
+                value={this.value}
+                placeholder="Email here"
+                onChange={this.onChange}
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label" htmlFor="password">
+                Password
+              </label>
+              <TextInput
+                name="password"
+                type="text"
+                value={this.value}
+                placeholder="Password here"
+                onChange={this.onChange}
+              />
+            </div>
+            <div className="button form-row">
+              <div className="form-group col-sm-12">
+                <button
+                  type="submit"
+                  className="btn btn-success"
+                  onClick={() => {
+                    this.props.history.push("/home");
+                  }}
+                >
+                  {" "}
+                  <span />
+                  Sign in
+                </button>
+                <hr />
+                <div>
+                  <span>Don't have an account yet?</span>{" "}
+                  <a href="/register">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     );
   }

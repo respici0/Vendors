@@ -1,0 +1,29 @@
+/* login page */
+
+#loginPage {
+  background-image: url("../images/assortedgoods.jpg");
+  /* background-color: black; */
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#loginPage input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0px;
+  color: white;
+}
+
+#loginPage h1,
+label,
+a,
+span {
+  color: white;
+  text-align: center;
+}
+
+#loginPage .button {
+  text-align: center;
+}
