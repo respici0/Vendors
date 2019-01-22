@@ -4,8 +4,8 @@ const NavBar = props => {
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/Login">
-          Vendors
+        <a className="navbar-brand" href="/home">
+          <i class="fas fa-utensils" />
         </a>
         <button
           className="navbar-toggler"
@@ -22,7 +22,7 @@ const NavBar = props => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/home">
                 Home <span className="sr-only" />
               </a>
             </li>
@@ -56,12 +56,10 @@ const NavBar = props => {
                 </a>
               </div>
             </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
-              </a>
-            </li>
           </ul>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button">
+            <a href="/Login">Log in</a>
+          </button>
         </div>
       </nav>
     </React.Fragment>

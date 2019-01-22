@@ -27,3 +27,38 @@ span {
 #loginPage .button {
   text-align: center;
 }
+
+/*Register Modal*/
+
+#registerModal {
+  background: black;
+}
+
+#registerModal .modal-content {
+  background-color: black;
+  background: transparent;
+  text-align: center;
+  color: white;
+}
+
+/* #registerModal .modal-header {
+  justify-content: center;
+  color: white;
+} */
+
+/* #registerModal .modal-footer {
+  justify-content: center;
+} */
+
+#registerModal input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0px;
+  color: white;
+}
+
+#registerModal .modal-body {
+  color: white;
+  text-align: left;
+}

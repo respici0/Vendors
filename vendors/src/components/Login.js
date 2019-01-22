@@ -1,7 +1,7 @@
 import React from "react";
-// import Register from "../components/Register";
 import { connect } from "react-redux";
 import TextInput from "../common/TextInput";
+import Register from "./Register";
 
 class Login extends React.Component {
   constructor(props) {
@@ -34,30 +34,23 @@ class Login extends React.Component {
         <div id="loginPage" className="d-none d-lg-flex align-items-center ">
           <div className="container w-50 ">
             <h1 className="display-2 font-weight-bolder mb-4">Vendors</h1>
-            <div className="form-group">
-              <label className="form-label" htmlFor="email">
-                Email
-              </label>
-              <TextInput
-                name="email"
-                type="text"
-                value={this.value}
-                placeholder="Email here"
-                onChange={this.onChange}
-              />
-            </div>
-            <div className="form-group">
-              <label className="form-label" htmlFor="password">
-                Password
-              </label>
-              <TextInput
-                name="password"
-                type="text"
-                value={this.value}
-                placeholder="Password here"
-                onChange={this.onChange}
-              />
-            </div>
+            <TextInput
+              name="email"
+              label="Email"
+              type="text"
+              value={this.value}
+              placeholder="Email here"
+              onChange={this.onChange}
+            />
+            <TextInput
+              name="password"
+              label="Password"
+              type="text"
+              value={this.value}
+              placeholder="Password here"
+              onChange={this.onChange}
+            />
+            <br />
             <div className="button form-row">
               <div className="form-group col-sm-12">
                 <button
@@ -74,12 +67,19 @@ class Login extends React.Component {
                 <hr />
                 <div>
                   <span>Don't have an account yet?</span>{" "}
-                  <a href="/register">Sign Up</a>
+                  <a
+                    href="#registerModal"
+                    data-toggle="modal"
+                    // data-target="#registerModal"
+                  >
+                    Sign Up
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <Register />
       </React.Fragment>
     );
   }
