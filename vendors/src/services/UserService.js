@@ -2,9 +2,10 @@ import axios from "axios";
 
 class UserService {
   static Register(data, onSuccess, onError) {
-    const url = `http://vendors.test/api/Account/Register`;
+    const url = `/api/Account/Register`;
     const config = {
-      method: "POST"
+      method: "POST",
+      data: data
     };
     axios.defaults.withCredentials = true;
     axios(url, config)

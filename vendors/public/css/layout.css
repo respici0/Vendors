@@ -30,27 +30,15 @@ span {
 
 /*Register Modal*/
 
-#registerModal {
-  background: black;
+#registerPage {
+  background-image: url("../images/assortedgoods.jpg");
+  /* background-color: black; */
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#registerModal .modal-content {
-  background-color: black;
-  background: transparent;
-  text-align: center;
-  color: white;
-}
-
-/* #registerModal .modal-header {
-  justify-content: center;
-  color: white;
-} */
-
-/* #registerModal .modal-footer {
-  justify-content: center;
-} */
-
-#registerModal input {
+#registerPage input {
   background: transparent;
   border: none;
   border-bottom: 1px solid white;
@@ -58,7 +46,14 @@ span {
   color: white;
 }
 
-#registerModal .modal-body {
+#registerPage h1,
+label,
+a,
+span {
   color: white;
-  text-align: left;
+  text-align: center;
+}
+
+#registerPage .button {
+  text-align: center;
 }

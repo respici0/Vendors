@@ -8,7 +8,7 @@ function reducer(state, action) {
   }
 
   //{type:'SET_USER', user:'name'}
-  if (action.type === "SET_USER") {
+  if (action.type === "SET_LOGIN_USER") {
     return {
       ...state,
       user: action.user

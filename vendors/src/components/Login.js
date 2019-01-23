@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import TextInput from "../common/TextInput";
-import Register from "./Register";
+import { withRouter } from "react-router-dom";
 
 class Login extends React.Component {
   constructor(props) {
@@ -64,22 +64,10 @@ class Login extends React.Component {
                   <span />
                   Sign in
                 </button>
-                <hr />
-                <div>
-                  <span>Don't have an account yet?</span>{" "}
-                  <a
-                    href="#registerModal"
-                    data-toggle="modal"
-                    // data-target="#registerModal"
-                  >
-                    Sign Up
-                  </a>
-                </div>
               </div>
             </div>
           </div>
         </div>
-        <Register />
       </React.Fragment>
     );
   }
@@ -94,11 +82,13 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   // return an object that becomes the props given to your component
   return {
-    setUser: user => dispatch({ type: "SET_USER", user })
+    setUser: user => dispatch({ type: "SET_LOGIN_USER", user })
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Login);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Login)
+);

@@ -1,11 +1,11 @@
 import React from "react";
 import RegisterForm from "../forms/RegisterForm";
-import TextInput from "../common/TextInput";
+import UserService from "../services/UserService";
 
 class Register extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", password: "", confirmPassword: "" };
+    this.state = {};
   }
 
   onChange = e => {
@@ -19,39 +19,41 @@ class Register extends React.Component {
     );
   };
 
+  onRegisterButtonClick = () => {
+    console.log("Register clicked", this.state);
+    UserService.Register(
+      this.state,
+      this.onRegisterSuccess,
+      this.onRegistrationError
+    );
+  };
+
+  onRegisterSuccess = resp => {
+    console.log("User registration success");
+    this.props.history.push("/login");
+  };
+
+  onRegistrationError = resp => {
+    console.log("User registration error");
+  };
+
   render() {
     return (
       <React.Fragment>
-        <div
-          className="modal fade bd-modal-lg"
-          id="registerModal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="ModalLabel"
-          aria-hidden="true"
-        >
-          <div
-            className="modal-dialog modal-dialog-centered modal-lg"
-            role="document"
-          >
-            <div className="modal-content">
-              {/* <div className="modal-header"> */}
-              <h1 className="modal-title display-2 font-weight-bolder mb-4">
-                Register
-              </h1>
-              {/* </div> */}
-              <div className="modal-body">
-                <div className="container">
-                  {" "}
-                  <RegisterForm {...this.state} onChange={this.onChange} />
-                </div>
-              </div>
-              {/* <div className="modal-footer"> */}
+        <div id="registerPage" className="d-none d-lg-flex align-items-center ">
+          <div className="container w-50 ">
+            <h1 className="display-2 font-weight-bolder mb-4">Register</h1>
+            <RegisterForm {...this.state} onChange={this.onChange} />
+            <br />
+            <div className="button form-row">
               <div className="form-group col-sm-12">
-                <button type="button" className="btn btn-success">
+                <button
+                  type="button"
+                  className="btn btn-success"
+                  onClick={this.onRegisterButtonClick}
+                >
                   Register
                 </button>
-                {/* </div> */}
               </div>
             </div>
           </div>

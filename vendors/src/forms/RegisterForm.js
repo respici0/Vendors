@@ -6,7 +6,7 @@ const RegisterForm = props => {
     <React.Fragment>
       <form>
         <TextInput
-          name="email"
+          name="Email"
           label="Email"
           type="text"
           value={props.email}
@@ -14,7 +14,7 @@ const RegisterForm = props => {
           onChange={props.onChange}
         />
         <TextInput
-          name="password"
+          name="Password"
           label="Password"
           type="password"
           value={props.password}
@@ -22,7 +22,7 @@ const RegisterForm = props => {
           onChange={props.onChange}
         />
         <TextInput
-          name="confirmPassword"
+          name="ConfirmPassword"
           label="Confirm Password"
           type="password"
           value={props.confirmPassword}
