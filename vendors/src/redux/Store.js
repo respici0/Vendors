@@ -3,7 +3,7 @@ import { createStore } from "redux";
 function reducer(state, action) {
   if (!state) {
     return {
-      userId: null
+      user: null
     };
   }
 
@@ -11,7 +11,7 @@ function reducer(state, action) {
   if (action.type === "SET_LOGIN_USER") {
     return {
       ...state,
-      userId: action.userId
+      user: action.user
     };
   }
 }

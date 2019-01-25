@@ -62,3 +62,46 @@ span {
 #home .searchBar {
   margin-top: 25px;
 }
+
+/* searched vendors card */
+/* #searchedVendors .card-img-overlay {
+
+} */
+
+#home .card:hover .card-img {
+  opacity: 0.5;
+}
+
+#home:hover .card-img-overlay {
+  opacity: 1;
+  text-align: center;
+  height: auto;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+#home .card-img-overlay {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#home .card-title {
+  text-align: center;
+  font-size: 34px;
+}
+
+#home .card-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
