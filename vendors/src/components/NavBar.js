@@ -24,7 +24,7 @@ class NavBar extends React.Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
                 <a className="nav-link" href="/home">
-                  Home <span className="sr-only" />
+                  Find Vendor <span className="sr-only" />
                 </a>
               </li>
               <li className="nav-item">

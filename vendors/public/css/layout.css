@@ -28,11 +28,10 @@ span {
   text-align: center;
 }
 
-/*Register Modal*/
+/*Register Page*/
 
 #registerPage {
   background-image: url("../images/assortedgoods.jpg");
-  /* background-color: black; */
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -56,4 +55,10 @@ span {
 
 #registerPage .button {
   text-align: center;
+}
+
+/*Home Page*/
+
+#home .searchBar {
+  margin-top: 25px;
 }
