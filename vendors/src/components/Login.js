@@ -75,14 +75,14 @@ class Login extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    user: state.user
+    userId: state.userId
   };
 }
 
 function mapDispatchToProps(dispatch) {
   // return an object that becomes the props given to your component
   return {
-    setUser: user => dispatch({ type: "SET_LOGIN_USER", user })
+    setUserId: userId => dispatch({ type: "SET_LOGIN_USER", userId })
   };
 }
 
