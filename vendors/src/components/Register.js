@@ -52,7 +52,7 @@ class Register extends React.Component {
                   className="btn btn-success"
                   onClick={this.onRegisterButtonClick}
                 >
-                  Register
+                  Sign up
                 </button>
               </div>
             </div>

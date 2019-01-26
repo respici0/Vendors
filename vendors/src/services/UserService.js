@@ -1,5 +1,6 @@
 import axios from "axios";
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 class UserService {
   // static Register(data, onSuccess, onError) {
@@ -23,12 +24,14 @@ class UserService {
 
   static YelpApiSearch(searchedCity, onSuccess, onError) {
     const config = {
-      Authorization: process.env.REACT_APP_KEY
+      Authorization: process.env.REACT_APP_KEY,
+      "Access-Control-Alllow-Origin": "*"
     };
     axios
       .get(
         `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=foodtrucks&location=${searchedCity}`,
         {
+          withCredentials: true,
           headers: config
         }
       )

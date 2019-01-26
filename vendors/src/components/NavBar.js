@@ -58,17 +58,19 @@ class NavBar extends React.Component {
                 </div>
               </li>
             </ul>
+            <div className="mr-2">
+              <a href="/Login">Login</a>
+            </div>
             <button
-              className="btn btn-outline-warning my-2 my-sm-0 mr-1"
+              className="btn btn-outline-secondary my-2 my-sm-0 mr-1"
               type="button"
             >
-              <a href="/Register">Register</a>
-            </button>
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="button"
-            >
-              <a href="/Login">Log in</a>
+              <a
+                href="/Register"
+                // style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Sign up
+              </a>
             </button>
           </div>
         </nav>

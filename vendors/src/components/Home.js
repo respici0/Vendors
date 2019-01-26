@@ -18,7 +18,7 @@ class Home extends React.Component {
   };
 
   onSearchClick = () => {
-    console.log("Search button clicked", this.state);
+    console.log("Search button clicked", this.state.searchedCity);
     UserService.YelpApiSearch(
       this.state.searchedCity,
       this.onYelpApiSearchSuccess,
@@ -38,27 +38,26 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div id="home" className="container">
-          <form>
-            <div className="searchBar">
-              <div className="row d-flex justify-content-center">
-                <input
-                  type="search"
-                  name="searchedCity"
-                  className="form-control col-md-3"
-                  placeholder="What city are you in?"
-                  onChange={this.onChange}
-                />
-                <button
-                  type="button"
-                  className="btn btn-success"
-                  onClick={this.onSearchClick}
-                >
-                  Search
-                </button>
-              </div>
+          <div className="searchBar">
+            <div className="row d-flex justify-content-center">
+              <input
+                type="search"
+                name="searchedCity"
+                className="form-control col-md-3"
+                placeholder="What city are you in?"
+                onChange={this.onChange}
+              />
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={this.onSearchClick}
+              >
+                Search
+              </button>
             </div>
-          </form>
-          <hr style={{ borderWidth: "1px" }} />
+          </div>
+
+          <hr />
           <div className="searchedVendors">
             <div className="card bg-dark text-white">
               <img className="card-img" src={image} alt="Vendor" />
