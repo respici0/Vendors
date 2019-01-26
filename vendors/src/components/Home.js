@@ -58,7 +58,7 @@ class Home extends React.Component {
               </div>
             </div>
           </form>
-          <hr />
+          <hr style={{ borderWidth: "1px" }} />
           <div className="searchedVendors">
             <div className="card bg-dark text-white">
               <img className="card-img" src={image} alt="Vendor" />
