@@ -24,8 +24,7 @@ class UserService {
 
   static YelpApiSearch(searchedCity, onSuccess, onError) {
     const config = {
-      Authorization: process.env.REACT_APP_KEY,
-      "Access-Control-Alllow-Origin": "*"
+      Authorization: process.env.REACT_APP_KEY
     };
     axios
       .get(
