@@ -25,7 +25,9 @@ class UserService {
   static YelpApiSearch(searchedCity, onSuccess, onError) {
     const config = {
       Authorization: process.env.REACT_APP_KEY
+      //Origin: "https://vendors.test"
     };
+    axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
     axios
       .get(
         `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=foodtrucks&location=${searchedCity}`,
