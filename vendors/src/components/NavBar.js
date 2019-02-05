@@ -27,7 +27,7 @@ class NavBar extends React.Component {
                   Find Vendor <span className="sr-only" />
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">
                   Link
                 </a>
@@ -56,22 +56,24 @@ class NavBar extends React.Component {
                     Something else here
                   </a>
                 </div>
-              </li>
+              </li> */}
             </ul>
-            <div className="mr-2">
-              <a href="/Login">Login</a>
-            </div>
-            <button
-              className="btn btn-outline-secondary my-2 my-sm-0 mr-1"
-              type="button"
-            >
-              <a
-                href="/Register"
-                // style={{ textDecoration: "none", color: "inherit" }}
-              >
-                Sign up
+            <div>
+              <a href="/Login" className="mr-2">
+                Login
               </a>
-            </button>
+              <button
+                className="btn btn-outline-secondary my-2 my-sm-0 mr-1"
+                type="button"
+              >
+                <a
+                  href="/Register"
+                  // style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Sign up
+                </a>
+              </button>
+            </div>
           </div>
         </nav>
       </React.Fragment>

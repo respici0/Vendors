@@ -41,7 +41,7 @@ class Home extends React.Component {
           <div className="searchBar">
             <div className="row d-flex justify-content-center">
               <input
-                type="search"
+                type="text"
                 name="searchedCity"
                 className="form-control col-md-3"
                 placeholder="What city are you in?"
@@ -56,7 +56,6 @@ class Home extends React.Component {
               </button>
             </div>
           </div>
-
           <hr />
           <div className="searchedVendors">
             <div className="card bg-dark text-white">

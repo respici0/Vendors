@@ -24,14 +24,13 @@ class UserService {
 
   static YelpApiSearch(searchedCity, onSuccess, onError) {
     const config = {
-      Authorization: process.env.REACT_APP_KEY
+      Authorization:
+        "bearer SikMaxiAgbp-OA1RqhSf1uuRHvG_ktidds1st4z4_LAfbKMYRo02yJw1MKesqIfibwcbadaEOFt27WoNSWW6mh4YcDxxZ6KwRTRckPV086n54HCyu0oaq2BMMmhLXHYx"
     };
-    axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
     axios
       .get(
-        `https://api.yelp.com/v3/businesses/search?categories=foodtrucks&location=${searchedCity}`,
+        `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=foodtrucks&location=${searchedCity}`,
         {
-          withCredentials: true,
           headers: config
         }
       )
