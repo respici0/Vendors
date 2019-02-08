@@ -7,7 +7,7 @@ const RegisterForm = props => {
       <form>
         <TextInput
           name="Email"
-          label="Email"
+          // label="Email"
           type="text"
           value={props.email}
           placeholder="Enter a valid email"
@@ -15,7 +15,7 @@ const RegisterForm = props => {
         />
         <TextInput
           name="Password"
-          label="Password"
+          // label="Password"
           type="password"
           value={props.password}
           placeholder="Password"
@@ -23,7 +23,7 @@ const RegisterForm = props => {
         />
         <TextInput
           name="ConfirmPassword"
-          label="Confirm Password"
+          // label="Confirm Password"
           type="password"
           value={props.confirmPassword}
           placeholder="Confirm your password"

@@ -49,7 +49,7 @@ class Register extends React.Component {
               <div className="form-group col-sm-12">
                 <button
                   type="button"
-                  className="btn btn-success"
+                  className="btn btn-outline-success"
                   onClick={this.onRegisterButtonClick}
                 >
                   Sign up

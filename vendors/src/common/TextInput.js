@@ -2,7 +2,7 @@ import React from "react";
 
 const TextInput = props => (
   <React.Fragment>
-    <label htmlFor={props.name}>{props.label}: </label>
+    <label htmlFor={props.name}>{props.label} </label>
     <input
       name={props.name}
       className="form-control input"

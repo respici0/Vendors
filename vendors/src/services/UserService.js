@@ -22,14 +22,14 @@ class UserService {
       .catch(onError);
   }
 
-  static YelpApiSearch(searchedCity, onSuccess, onError) {
+  static YelpApiSearch(searchParam, onSuccess, onError) {
     const config = {
       Authorization:
         "bearer SikMaxiAgbp-OA1RqhSf1uuRHvG_ktidds1st4z4_LAfbKMYRo02yJw1MKesqIfibwcbadaEOFt27WoNSWW6mh4YcDxxZ6KwRTRckPV086n54HCyu0oaq2BMMmhLXHYx"
     };
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=foodtrucks&location=${searchedCity}`,
+        `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=foodtrucks&latitude=33.8186&longitude=-117.9729&radius=40000&categories=${searchParam}`,
         {
           headers: config
         }

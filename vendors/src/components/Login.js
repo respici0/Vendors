@@ -36,7 +36,7 @@ class Login extends React.Component {
             <h1 className="display-2 font-weight-bolder mb-4">Vendors</h1>
             <TextInput
               name="email"
-              label="Email"
+              // label="Email"
               type="text"
               value={this.value}
               placeholder="Email here"
@@ -44,7 +44,7 @@ class Login extends React.Component {
             />
             <TextInput
               name="password"
-              label="Password"
+              // label="Password"
               type="text"
               value={this.value}
               placeholder="Password here"
@@ -55,7 +55,7 @@ class Login extends React.Component {
               <div className="form-group col-sm-12">
                 <button
                   type="submit"
-                  className="btn btn-success"
+                  className="btn btn-outline-success"
                   onClick={() => {
                     this.props.history.push("/home");
                   }}
