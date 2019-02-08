@@ -1,11 +1,41 @@
 import React from "react";
-// import image from "../images/programmer.jpg";
 import UserService from "../services/UserService";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  componentDidMount() {
+    this.getLocation();
+  }
+
+  getLocation() {
+    if (navigator.geolocation) {
+      let options = { timeout: 60000 };
+      navigator.geolocation.getCurrentPosition(
+        this.showLocation,
+        this.errorHandler,
+        options
+      );
+    } else {
+      alert("Sorry, browser does not support geolocation!");
+    }
+  }
+
+  showLocation = position => {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    console.log("Lat:", latitude, "Long:", longitude);
+  };
+
+  errorHandler(err) {
+    if (err.code == 1) {
+      alert("Error: Access is denied!");
+    } else if (err.code == 2) {
+      alert("Error: Position is unavailable!");
+    }
   }
 
   onChange = e => {
@@ -19,6 +49,7 @@ class Home extends React.Component {
 
   onSearchClick = () => {
     console.log("Search button clicked", this.state.searchParam);
+    this.getLocation();
     UserService.YelpApiSearch(
       this.state.searchParam,
       this.onYelpApiSearchSuccess,
@@ -66,7 +97,10 @@ class Home extends React.Component {
                       href={obj.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                    />
+                      style={{ color: "white" }}
+                    >
+                      REVIEWS
+                    </a>
                   </p>
                   <button type="button" className="btn btn-outline-success">
                     Locate

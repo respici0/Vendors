@@ -19,6 +19,12 @@
   font-size: 18px;
 }
 
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* login page */
 
 #loginPage,
@@ -64,9 +70,6 @@
 }
 
 /*Home Page*/
-
-/* searched vendors card */
-
 #home.container {
   position: relative;
   top: 100px;

@@ -1,4 +1,5 @@
 import React from "react";
+// import LandingPage from "./LandingPage";
 
 class NavBar extends React.Component {
   render() {
@@ -22,7 +23,7 @@ class NavBar extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="/home" beat={true}>
+                <a className="nav-link" href="/home">
                   Find Vendor
                 </a>
               </li>
