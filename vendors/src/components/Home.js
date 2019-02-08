@@ -52,17 +52,21 @@ class Home extends React.Component {
       ) : (
         vendors.map(obj => {
           return (
-            <div key={obj.id} className="searchedVendors">
+            <div key={obj.id} className="searchedVendors mt-5">
               <div className="card bg-dark text-white">
                 <img className="card-img" src={obj.image_url} alt="Vendor" />
                 <div className="card-img-overlay">
                   <h5 className="card-title">{obj.name}</h5>
                   <p className="card-text">
-                    {obj.is_closed != false ? "Closed" : "OPEN"}
+                    {obj.is_closed !== false ? "Closed" : "OPEN"}
                   </p>
                   <p>Rating: {obj.rating}</p>
                   <p>
-                    <a href={obj.url} target="_blank" />
+                    <a
+                      href={obj.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    />
                   </p>
                   <button type="button" className="btn btn-outline-success">
                     Locate
