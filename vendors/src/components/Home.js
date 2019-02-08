@@ -28,12 +28,21 @@ class Home extends React.Component {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     console.log("Lat:", latitude, "Long:", longitude);
+    this.setState(
+      {
+        latitude,
+        longitude
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
   };
 
   errorHandler(err) {
-    if (err.code == 1) {
+    if (err.code === 1) {
       alert("Error: Access is denied!");
-    } else if (err.code == 2) {
+    } else if (err.code === 2) {
       alert("Error: Position is unavailable!");
     }
   }
@@ -51,7 +60,7 @@ class Home extends React.Component {
     console.log("Search button clicked", this.state.searchParam);
     this.getLocation();
     UserService.YelpApiSearch(
-      this.state.searchParam,
+      this.state,
       this.onYelpApiSearchSuccess,
       this.onYelpApiSearchError
     );
@@ -102,7 +111,7 @@ class Home extends React.Component {
                       REVIEWS
                     </a>
                   </p>
-                  <button type="button" className="btn btn-outline-success">
+                  <button type="button" className="btn btn-dark">
                     Locate
                   </button>
                 </div>
@@ -115,7 +124,9 @@ class Home extends React.Component {
       <React.Fragment>
         <div id="home" className="container">
           <div>
-            <p className="header">I'm hungry for. . .</p>
+            <p>
+              I'm <strong className="header">HUNGRY</strong> for. . .
+            </p>
           </div>
           <div className="searchBar">
             <div className="row d-flex justify-content-center">
@@ -128,7 +139,7 @@ class Home extends React.Component {
               />
               <button
                 type="button"
-                className="btn btn-outline-secondary mt-2"
+                className="btn btn-outline-dark mt-2"
                 onClick={this.onSearchClick}
               >
                 . . . so let's go!

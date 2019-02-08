@@ -32,8 +32,8 @@ class Login extends React.Component {
     return (
       <React.Fragment>
         <div id="loginPage" className="d-none d-lg-flex align-items-center ">
-          <div className="container w-50 ">
-            <h1 className="display-2 font-weight-bolder mb-4">Vendors</h1>
+          <div className="container">
+            <h1 className="display-2 font-weight-bolder mb-4">Login</h1>
             <TextInput
               name="email"
               // label="Email"
@@ -51,7 +51,7 @@ class Login extends React.Component {
               onChange={this.onChange}
             />
             <br />
-            <div className="button form-row">
+            <div className="button form-row mt-5">
               <div className="form-group col-sm-12">
                 <button
                   type="submit"

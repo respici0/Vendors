@@ -5,9 +5,12 @@ class NavBar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light">
           <a className="navbar-brand" href="/home">
-            <i className="fas fa-utensils" />
+            <i
+              className="fas fa-utensils"
+              style={{ color: "white", fontSize: "24px" }}
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -24,7 +27,9 @@ class NavBar extends React.Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
                 <a className="nav-link" href="/home">
-                  Find Vendor
+                  <span style={{ color: "white", fontSize: "22px" }}>
+                    Find Vendor
+                  </span>
                 </a>
               </li>
               {/* <li className="nav-item">
@@ -63,7 +68,7 @@ class NavBar extends React.Component {
                 Login
               </a>
               <button
-                className="btn btn-outline-secondary my-2 my-sm-0 mr-1"
+                className="btn btn-outline-dark my-2 my-sm-0 mr-1"
                 type="button"
               >
                 <a

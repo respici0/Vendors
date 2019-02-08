@@ -41,7 +41,7 @@ class Register extends React.Component {
     return (
       <React.Fragment>
         <div id="registerPage" className="d-none d-lg-flex align-items-center ">
-          <div className="container w-50 ">
+          <div className="container">
             <h1 className="display-2 font-weight-bolder mb-4">Register</h1>
             <RegisterForm {...this.state} onChange={this.onChange} />
             <br />
