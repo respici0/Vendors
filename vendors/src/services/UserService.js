@@ -24,8 +24,7 @@ class UserService {
 
   static YelpApiSearch(state, onSuccess, onError) {
     const config = {
-      Authorization:
-        "bearer SikMaxiAgbp-OA1RqhSf1uuRHvG_ktidds1st4z4_LAfbKMYRo02yJw1MKesqIfibwcbadaEOFt27WoNSWW6mh4YcDxxZ6KwRTRckPV086n54HCyu0oaq2BMMmhLXHYx"
+      Authorization: process.env.REACT_APP_KEY
     };
     axios
       .get(

@@ -1,5 +1,5 @@
 import React from "react";
-// import LandingPage from "./LandingPage";
+import LandingPage from "./LandingPage";
 
 class NavBar extends React.Component {
   render() {
@@ -81,6 +81,7 @@ class NavBar extends React.Component {
             </div>
           </div>
         </nav>
+        {/* <LandingPage /> */}
       </React.Fragment>
     );
   }
